@@ -10,6 +10,7 @@ object frmPrincipal: TfrmPrincipal
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIForm
   Menu = menu
   OldCreateOrder = False
   WindowState = wsMaximized
@@ -5005,7 +5006,7 @@ object frmPrincipal: TfrmPrincipal
       0EF63994C14C11E67CF44A006483D398A2AB3846653300C51CC6E394FFD9}
     ShowHint = False
     Stretch = True
-    ExplicitHeight = 217
+    ExplicitHeight = 105
   end
   object stsBar: TStatusBar
     Left = 0
@@ -5022,9 +5023,6 @@ object frmPrincipal: TfrmPrincipal
       item
         Width = 100
       end>
-    ExplicitLeft = 96
-    ExplicitTop = 40
-    ExplicitWidth = 0
   end
   object menu: TMainMenu
     Left = 24
@@ -5044,8 +5042,9 @@ object frmPrincipal: TfrmPrincipal
     object Venda1: TMenuItem
       Caption = 'Venda'
     end
-    object Venda2: TMenuItem
+    object Sair: TMenuItem
       Caption = 'Sair'
+      OnClick = SairClick
     end
   end
   object Timer: TTimer
