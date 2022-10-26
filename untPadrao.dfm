@@ -25,8 +25,6 @@ object frmPadrao: TfrmPadrao
     Color = clMoneyGreen
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 355
-    ExplicitWidth = 788
     object btnAdicionar: TBitBtn
       Left = 8
       Top = 8
@@ -1041,10 +1039,6 @@ object frmPadrao: TfrmPadrao
     Height = 264
     Align = alClient
     TabOrder = 2
-    ExplicitLeft = 352
-    ExplicitTop = 240
-    ExplicitWidth = 185
-    ExplicitHeight = 41
   end
   object dts: TDataSource
     Left = 752

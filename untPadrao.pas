@@ -31,6 +31,7 @@ type
     { Private declarations }
   public
     { Public declarations }
+    procedure habilita(ativa: boolean);
   end;
 
 var
@@ -43,6 +44,7 @@ implementation
 procedure TfrmPadrao.btnAdicionarClick(Sender: TObject);
 begin
   dts.DataSet.Append;
+
 end;
 
 procedure TfrmPadrao.btnAlterarClick(Sender: TObject);
@@ -69,6 +71,18 @@ end;
 procedure TfrmPadrao.btnSalvarClick(Sender: TObject);
 begin
   dts.DataSet.Post;
+end;
+
+procedure TfrmPadrao.habilita(ativa: boolean);
+begin
+    btnAdicionar.Enabled := ativa;
+    btnAlterar.Enabled := ativa;
+    btnExcluir.Enabled := ativa;
+    btnSalvar.Enabled := not ativa;
+    btnCancelar.Enabled := not ativa;
+    btnPesquisar.Enabled := ativa;
+    btnSelecionar.Enabled := ativa;
+    btnFechar.Enabled := ativa;
 end;
 
 end.
