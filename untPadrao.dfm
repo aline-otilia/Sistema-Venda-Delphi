@@ -14,6 +14,8 @@ object frmPadrao: TfrmPadrao
   OldCreateOrder = False
   Position = poMainFormCenter
   Visible = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object pnlBotoes: TPanel

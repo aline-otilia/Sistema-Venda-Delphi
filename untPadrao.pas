@@ -27,6 +27,8 @@ type
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,17 +46,20 @@ implementation
 procedure TfrmPadrao.btnAdicionarClick(Sender: TObject);
 begin
   dts.DataSet.Append;
+  habilita(false);
 
 end;
 
 procedure TfrmPadrao.btnAlterarClick(Sender: TObject);
 begin
   dts.DataSet.Edit;
+    habilita(false);
 end;
 
 procedure TfrmPadrao.btnCancelarClick(Sender: TObject);
 begin
   dts.DataSet.Cancel;
+  habilita(true);
 end;
 
 procedure TfrmPadrao.btnExcluirClick(Sender: TObject);
@@ -71,6 +76,17 @@ end;
 procedure TfrmPadrao.btnSalvarClick(Sender: TObject);
 begin
   dts.DataSet.Post;
+  habilita(true);
+end;
+
+procedure TfrmPadrao.FormCreate(Sender: TObject);
+begin
+    dts.DataSet.Open;
+end;
+
+procedure TfrmPadrao.FormDestroy(Sender: TObject);
+begin
+    dts.DataSet.Close;
 end;
 
 procedure TfrmPadrao.habilita(ativa: boolean);
