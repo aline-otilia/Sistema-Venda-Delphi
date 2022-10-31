@@ -47,7 +47,6 @@ procedure TfrmPadrao.btnAdicionarClick(Sender: TObject);
 begin
   dts.DataSet.Append;
   habilita(false);
-
 end;
 
 procedure TfrmPadrao.btnAlterarClick(Sender: TObject);

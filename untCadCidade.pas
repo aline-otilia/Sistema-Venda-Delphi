@@ -10,11 +10,15 @@ uses
 type
   TfrmCadCidade = class(TfrmPadrao)
     Label1: TLabel;
-    DBEdit1: TDBEdit;
+    dbeCodCidade: TDBEdit;
     Label2: TLabel;
-    DBEdit2: TDBEdit;
+    dbeNomeCidade: TDBEdit;
     Label3: TLabel;
-    DBEdit3: TDBEdit;
+    dbeSiglaEstado: TDBEdit;
+    procedure btnAdicionarClick(Sender: TObject);
+    procedure btnAlterarClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,5 +33,34 @@ implementation
 {$R *.dfm}
 
 uses untModulo;
+
+procedure TfrmCadCidade.btnAdicionarClick(Sender: TObject);
+begin
+  inherited;
+  modulo.qryCidadeIDCIDADE.AsString := modulo.AutoNum('IDCIDADE','CIDADE');
+  dbeNomeCidade.ReadOnly := false;
+  dbeSiglaEstado.ReadOnly := false;
+end;
+
+procedure TfrmCadCidade.btnAlterarClick(Sender: TObject);
+begin
+  inherited;
+  dbeNomeCidade.ReadOnly := false;
+  dbeSiglaEstado.ReadOnly := false;
+end;
+
+procedure TfrmCadCidade.btnCancelarClick(Sender: TObject);
+begin
+  inherited;
+  dbeNomeCidade.ReadOnly := true;
+  dbeSiglaEstado.ReadOnly := true;
+end;
+
+procedure TfrmCadCidade.btnSalvarClick(Sender: TObject);
+begin
+  inherited;
+  dbeNomeCidade.ReadOnly := true;
+  dbeSiglaEstado.ReadOnly := true;
+end;
 
 end.

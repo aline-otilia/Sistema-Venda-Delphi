@@ -50,4 +50,40 @@ object modulo: Tmodulo
       Size = 2
     end
   end
+  object qryAutoNum: TFDQuery
+    Connection = conexao
+    Left = 16
+    Top = 128
+  end
+  object qryProduto: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'select * from produto')
+    Left = 72
+    Top = 72
+    object qryProdutoIDPRODUTO: TIntegerField
+      FieldName = 'IDPRODUTO'
+      Origin = 'IDPRODUTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryProdutoDESCRPRODUTO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'DESCRPRODUTO'
+      Origin = 'DESCRPRODUTO'
+      Size = 50
+    end
+    object qryProdutoVALORPRODUTO: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'VALORPRODUTO'
+      Origin = 'VALORPRODUTO'
+      Precision = 8
+      Size = 2
+    end
+    object qryProdutoQTDEPRODUTO: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'QTDEPRODUTO'
+      Origin = 'QTDEPRODUTO'
+    end
+  end
 end

@@ -1,17 +1,16 @@
 inherited frmCadCidade: TfrmCadCidade
+  BorderStyle = bsNone
   Caption = 'Cadastro de Cidade'
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlCampos: TPanel
-    ExplicitLeft = 24
-    ExplicitTop = 175
     object Label1: TLabel
       Left = 144
       Top = 104
       Width = 33
       Height = 13
       Caption = 'C'#243'digo'
-      FocusControl = DBEdit1
+      FocusControl = dbeCodCidade
     end
     object Label2: TLabel
       Left = 215
@@ -19,7 +18,7 @@ inherited frmCadCidade: TfrmCadCidade
       Width = 27
       Height = 13
       Caption = 'Nome'
-      FocusControl = DBEdit2
+      FocusControl = dbeNomeCidade
     end
     object Label3: TLabel
       Left = 563
@@ -27,33 +26,36 @@ inherited frmCadCidade: TfrmCadCidade
       Width = 13
       Height = 13
       Caption = 'UF'
-      FocusControl = DBEdit3
+      FocusControl = dbeSiglaEstado
     end
-    object DBEdit1: TDBEdit
+    object dbeCodCidade: TDBEdit
       Left = 144
       Top = 120
       Width = 57
       Height = 21
       DataField = 'IDCIDADE'
       DataSource = dts
+      ReadOnly = True
       TabOrder = 0
     end
-    object DBEdit2: TDBEdit
+    object dbeNomeCidade: TDBEdit
       Left = 215
       Top = 120
       Width = 326
       Height = 21
       DataField = 'NOMECIDADE'
       DataSource = dts
+      ReadOnly = True
       TabOrder = 1
     end
-    object DBEdit3: TDBEdit
+    object dbeSiglaEstado: TDBEdit
       Left = 563
       Top = 120
       Width = 57
       Height = 21
       DataField = 'SIGLAESTADO'
       DataSource = dts
+      ReadOnly = True
       TabOrder = 2
     end
   end

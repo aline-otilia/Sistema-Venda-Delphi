@@ -5031,6 +5031,7 @@ object frmPrincipal: TfrmPrincipal
       Caption = 'Cadastros'
       object Cidade1: TMenuItem
         Caption = 'Cidade'
+        OnClick = Cidade1Click
       end
       object Cidade2: TMenuItem
         Caption = 'Cliente'

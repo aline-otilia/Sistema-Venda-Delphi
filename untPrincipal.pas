@@ -21,6 +21,7 @@ type
     Image1: TImage;
     procedure TimerTimer(Sender: TObject);
     procedure SairClick(Sender: TObject);
+    procedure Cidade1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,10 +35,18 @@ implementation
 
 {$R *.dfm}
 
+uses untCadCidade;
+
 procedure TfrmPrincipal.TimerTimer(Sender: TObject);
 begin
     stsBar.Panels[0].Text := DateToStr(Date);
     stsBar.Panels[1].Text := FormatDateTime('hh:mm',Time);
+end;
+
+procedure TfrmPrincipal.Cidade1Click(Sender: TObject);
+begin
+    Application.CreateForm(TfrmCadCidade,frmCadCidade);
+    frmCadCidade.Show;
 end;
 
 procedure TfrmPrincipal.SairClick(Sender: TObject);
