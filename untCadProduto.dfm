@@ -1,73 +1,71 @@
-inherited frmPadrao1: TfrmPadrao1
+inherited frmCadProduto: TfrmCadProduto
   Caption = 'Cadastro Produto'
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlCampos: TPanel
-    ExplicitLeft = 8
-    ExplicitTop = 170
     object Label1: TLabel
-      Left = 95
-      Top = 88
-      Width = 11
+      Left = 160
+      Top = 64
+      Width = 33
       Height = 13
-      Caption = 'ID'
-      FocusControl = DBEdit1
+      Caption = 'C'#243'digo'
+      FocusControl = dbeCod
     end
     object Label2: TLabel
-      Left = 248
-      Top = 85
-      Width = 27
+      Left = 340
+      Top = 64
+      Width = 300
       Height = 13
-      Caption = 'Nome'
-      FocusControl = DBEdit2
+      Caption = 'Descri'#231#227'o'
+      FocusControl = dbeDescr
     end
     object Label3: TLabel
-      Left = 95
-      Top = 128
+      Left = 160
+      Top = 109
       Width = 24
       Height = 13
       Caption = 'Valor'
-      FocusControl = DBEdit3
+      FocusControl = dbeValor
     end
     object Label4: TLabel
-      Left = 248
-      Top = 128
+      Left = 340
+      Top = 109
       Width = 56
       Height = 13
       Caption = 'Quantidade'
-      FocusControl = DBEdit4
+      FocusControl = dbeQtde
     end
-    object DBEdit1: TDBEdit
-      Left = 95
-      Top = 101
+    object dbeCod: TDBEdit
+      Left = 160
+      Top = 80
       Width = 134
       Height = 21
       DataField = 'IDPRODUTO'
       DataSource = dts
       TabOrder = 0
     end
-    object DBEdit2: TDBEdit
-      Left = 248
-      Top = 101
-      Width = 476
+    object dbeDescr: TDBEdit
+      Left = 340
+      Top = 80
+      Width = 300
       Height = 21
       DataField = 'DESCRPRODUTO'
       DataSource = dts
       TabOrder = 1
     end
-    object DBEdit3: TDBEdit
-      Left = 95
-      Top = 144
-      Width = 134
+    object dbeValor: TDBEdit
+      Left = 160
+      Top = 128
+      Width = 121
       Height = 21
       DataField = 'VALORPRODUTO'
       DataSource = dts
       TabOrder = 2
     end
-    object DBEdit4: TDBEdit
-      Left = 248
-      Top = 144
-      Width = 147
+    object dbeQtde: TDBEdit
+      Left = 340
+      Top = 128
+      Width = 134
       Height = 21
       DataField = 'QTDEPRODUTO'
       DataSource = dts

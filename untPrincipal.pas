@@ -22,6 +22,7 @@ type
     procedure TimerTimer(Sender: TObject);
     procedure SairClick(Sender: TObject);
     procedure Cidade1Click(Sender: TObject);
+    procedure Produto1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,7 +36,7 @@ implementation
 
 {$R *.dfm}
 
-uses untCadCidade;
+uses untCadCidade, untCadProduto;
 
 procedure TfrmPrincipal.TimerTimer(Sender: TObject);
 begin
@@ -47,6 +48,12 @@ procedure TfrmPrincipal.Cidade1Click(Sender: TObject);
 begin
     Application.CreateForm(TfrmCadCidade,frmCadCidade);
     frmCadCidade.Show;
+end;
+
+procedure TfrmPrincipal.Produto1Click(Sender: TObject);
+begin
+    Application.CreateForm(TfrmCadProduto,frmCadProduto);
+    frmCadProduto.Show;
 end;
 
 procedure TfrmPrincipal.SairClick(Sender: TObject);

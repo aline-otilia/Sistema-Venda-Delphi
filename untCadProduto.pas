@@ -8,15 +8,16 @@ uses
   Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls;
 
 type
-  TfrmPadrao1 = class(TfrmPadrao)
+  TfrmCadProduto = class(TfrmPadrao)
     Label1: TLabel;
-    DBEdit1: TDBEdit;
+    dbeCod: TDBEdit;
     Label2: TLabel;
-    DBEdit2: TDBEdit;
+    dbeDescr: TDBEdit;
     Label3: TLabel;
-    DBEdit3: TDBEdit;
+    dbeValor: TDBEdit;
     Label4: TLabel;
-    DBEdit4: TDBEdit;
+    dbeQtde: TDBEdit;
+    procedure btnAdicionarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,12 +25,18 @@ type
   end;
 
 var
-  frmPadrao1: TfrmPadrao1;
+  frmCadProduto: TfrmCadProduto;
 
 implementation
 
 {$R *.dfm}
 
 uses untModulo;
+
+procedure TfrmCadProduto.btnAdicionarClick(Sender: TObject);
+begin
+  inherited;
+  modulo.qryProdutoIDPRODUTO.asString := modulo.AutoNum('IDPRODUTO','PRODUTO');
+end;
 
 end.

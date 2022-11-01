@@ -62,6 +62,7 @@ object modulo: Tmodulo
     Left = 72
     Top = 72
     object qryProdutoIDPRODUTO: TIntegerField
+      DisplayLabel = 'C'#243'digo'
       FieldName = 'IDPRODUTO'
       Origin = 'IDPRODUTO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -69,19 +70,23 @@ object modulo: Tmodulo
     end
     object qryProdutoDESCRPRODUTO: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Descri'#231#227'o'
       FieldName = 'DESCRPRODUTO'
       Origin = 'DESCRPRODUTO'
       Size = 50
     end
     object qryProdutoVALORPRODUTO: TBCDField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Valor'
       FieldName = 'VALORPRODUTO'
       Origin = 'VALORPRODUTO'
+      currency = True
       Precision = 8
       Size = 2
     end
     object qryProdutoQTDEPRODUTO: TIntegerField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Quantidade'
       FieldName = 'QTDEPRODUTO'
       Origin = 'QTDEPRODUTO'
     end
