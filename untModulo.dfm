@@ -91,4 +91,60 @@ object modulo: Tmodulo
       Origin = 'QTDEPRODUTO'
     end
   end
+  object qryCliente: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'select * from cliente;')
+    Left = 128
+    Top = 72
+    object qryClienteIDCLIENTE: TIntegerField
+      DisplayLabel = 'C'#243'digo do Cliente'
+      FieldName = 'IDCLIENTE'
+      Origin = 'IDCLIENTE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryClienteNOMECLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Nome do Cliente'
+      FieldName = 'NOMECLIENTE'
+      Origin = 'NOMECLIENTE'
+      Size = 50
+    end
+    object qryClienteENDERCLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Endere'#231'o'
+      FieldName = 'ENDERCLIENTE'
+      Origin = 'ENDERCLIENTE'
+      Size = 50
+    end
+    object qryClienteCPFCLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'CPF'
+      FieldName = 'CPFCLIENTE'
+      Origin = 'CPFCLIENTE'
+    end
+    object qryClienteFONECLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Telefone'
+      FieldName = 'FONECLIENTE'
+      Origin = 'FONECLIENTE'
+    end
+    object qryClienteIDCIDADE: TIntegerField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'C'#243'digo da Cidade'
+      FieldName = 'IDCIDADE'
+      Origin = 'IDCIDADE'
+    end
+    object qryClienteNOMECIDADE: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOMECIDADE'
+      LookupDataSet = qryCidade
+      LookupKeyFields = 'IDCIDADE'
+      LookupResultField = 'NOMECIDADE'
+      KeyFields = 'IDCIDADE'
+      Size = 50
+      Lookup = True
+    end
+  end
 end

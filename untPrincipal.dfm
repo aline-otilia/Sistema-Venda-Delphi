@@ -5035,6 +5035,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Cidade2: TMenuItem
         Caption = 'Cliente'
+        OnClick = Cidade2Click
       end
       object Produto1: TMenuItem
         Caption = 'Produto'
