@@ -59,7 +59,7 @@ object modulo: Tmodulo
     Connection = conexao
     SQL.Strings = (
       'select * from produto')
-    Left = 72
+    Left = 80
     Top = 72
     object qryProdutoIDPRODUTO: TIntegerField
       DisplayLabel = 'C'#243'digo'
@@ -95,7 +95,7 @@ object modulo: Tmodulo
     Connection = conexao
     SQL.Strings = (
       'select * from cliente;')
-    Left = 128
+    Left = 152
     Top = 72
     object qryClienteIDCLIENTE: TIntegerField
       DisplayLabel = 'C'#243'digo do Cliente'

@@ -19,6 +19,7 @@ type
     procedure btnAlterarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure btnPesquisarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,7 +33,7 @@ implementation
 
 {$R *.dfm}
 
-uses untModulo;
+uses untModulo, untPesCidade;
 
 procedure TfrmCadCidade.btnAdicionarClick(Sender: TObject);
 begin
@@ -54,6 +55,13 @@ begin
   inherited;
   dbeNomeCidade.ReadOnly := true;
   dbeSiglaEstado.ReadOnly := true;
+end;
+
+procedure TfrmCadCidade.btnPesquisarClick(Sender: TObject);
+begin
+  inherited;
+  Application.CreateForm(TfrmPesCidade,frmPesCidade);
+  frmPesCidade.Show;
 end;
 
 procedure TfrmCadCidade.btnSalvarClick(Sender: TObject);

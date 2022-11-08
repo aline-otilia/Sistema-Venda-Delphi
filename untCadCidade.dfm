@@ -3,6 +3,11 @@ inherited frmCadCidade: TfrmCadCidade
   Caption = 'Cadastro de Cidade'
   PixelsPerInch = 96
   TextHeight = 13
+  inherited pnlBotoes: TPanel
+    inherited btnPesquisar: TBitBtn
+      OnClick = btnPesquisarClick
+    end
+  end
   inherited pnlCampos: TPanel
     object Label1: TLabel
       Left = 144
