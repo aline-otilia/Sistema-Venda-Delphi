@@ -2,9 +2,12 @@ inherited frmCadCliente: TfrmCadCliente
   Caption = 'frmCadCliente'
   PixelsPerInch = 96
   TextHeight = 13
+  inherited pnlBotoes: TPanel
+    inherited btnPesquisar: TBitBtn
+      OnClick = btnPesquisarClick
+    end
+  end
   inherited pnlCampos: TPanel
-    ExplicitLeft = 16
-    ExplicitTop = 163
     object Label1: TLabel
       Left = 24
       Top = 24

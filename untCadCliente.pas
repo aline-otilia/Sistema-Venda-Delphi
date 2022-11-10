@@ -28,6 +28,7 @@ type
     procedure dbeFoneEnter(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure btnPesquisarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,7 +41,7 @@ var
 implementation
 {$R *.dfm}
 
-uses untModulo;
+uses untModulo, untPesCliente;
 
 { TfrmCadCliente }
 
@@ -48,6 +49,13 @@ procedure TfrmCadCliente.btnAdicionarClick(Sender: TObject);
 begin
   inherited;
   modulo.qryClienteIDCLIENTE.AsString := modulo.AutoNum('IDCLIENTE','CLIENTE')
+end;
+
+procedure TfrmCadCliente.btnPesquisarClick(Sender: TObject);
+begin
+  inherited;
+  Application.CreateForm(TfrmPesCliente,frmPesCliente);
+  frmPesCliente.Show;
 end;
 
 procedure TfrmCadCliente.dbeCPFEnter(Sender: TObject);
