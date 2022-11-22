@@ -147,4 +147,46 @@ object modulo: Tmodulo
       Lookup = True
     end
   end
+  object qryConvenio: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'select * from convenio;')
+    Left = 208
+    Top = 72
+    object qryConvenioIDCONVENIO: TIntegerField
+      DisplayLabel = 'C'#243'digo do Conv'#234'nio'
+      FieldName = 'IDCONVENIO'
+      Origin = 'IDCONVENIO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryConvenioIDCLIENTE: TIntegerField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'C'#243'digo do Cliente'
+      FieldName = 'IDCLIENTE'
+      Origin = 'IDCLIENTE'
+    end
+    object qryConvenioVALORTOTAL: TLargeintField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Valor do Conv'#234'nio'
+      FieldName = 'VALORTOTAL'
+      Origin = 'VALORTOTAL'
+    end
+    object qryConvenioVALORUSADO: TLargeintField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Valor Debitado'
+      FieldName = 'VALORUSADO'
+      Origin = 'VALORUSADO'
+    end
+    object qryConvenioNOMECLIENTE: TStringField
+      DisplayLabel = 'Cliente'
+      FieldKind = fkLookup
+      FieldName = 'NOMECLIENTE'
+      LookupDataSet = qryCliente
+      LookupKeyFields = 'IDCLIENTE'
+      LookupResultField = 'NOMECLIENTE'
+      KeyFields = 'IDCLIENTE'
+      Lookup = True
+    end
+  end
 end

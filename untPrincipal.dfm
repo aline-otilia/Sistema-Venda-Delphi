@@ -5041,6 +5041,10 @@ object frmPrincipal: TfrmPrincipal
         Caption = 'Produto'
         OnClick = Produto1Click
       end
+      object Convenio: TMenuItem
+        Caption = 'Conv'#234'nio'
+        OnClick = ConvenioClick
+      end
     end
     object Venda1: TMenuItem
       Caption = 'Venda'

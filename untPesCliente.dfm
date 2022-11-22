@@ -9,7 +9,8 @@ inherited frmPesCliente: TfrmPesCliente
   inherited pnlPesquisa: TPanel
     Top = 265
     Width = 327
-    ExplicitTop = 201
+    ExplicitTop = 265
+    ExplicitWidth = 327
     inherited btnPesquisar: TBitBtn
       Left = 16
       Top = 6
@@ -34,11 +35,8 @@ inherited frmPesCliente: TfrmPesCliente
   inherited pnlCampos: TPanel
     Width = 327
     Height = 176
-    OnClick = pnlCamposClick
-    ExplicitLeft = 168
-    ExplicitTop = 128
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 327
+    ExplicitHeight = 176
     object Label2: TLabel
       Left = 16
       Top = 71

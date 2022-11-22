@@ -10,7 +10,9 @@ uses
   untCadCliente in 'untCadCliente.pas' {frmCadCliente},
   untPadraoPesquisa in 'untPadraoPesquisa.pas' {frmPadraoPesquisa},
   untPesCidade in 'untPesCidade.pas' {frmPesCidade},
-  untPesCliente in 'untPesCliente.pas' {frmPesCliente};
+  untPesCliente in 'untPesCliente.pas' {frmPesCliente},
+  untCadConvenio in 'untCadConvenio.pas' {frmCadConvenio},
+  untPesConvenio in 'untPesConvenio.pas' {frmPesConvenio};
 
 {$R *.res}
 

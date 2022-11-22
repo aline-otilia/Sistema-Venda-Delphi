@@ -19,11 +19,13 @@ type
     stsBar: TStatusBar;
     Timer: TTimer;
     Image1: TImage;
+    Convenio: TMenuItem;
     procedure TimerTimer(Sender: TObject);
     procedure SairClick(Sender: TObject);
     procedure Cidade1Click(Sender: TObject);
     procedure Produto1Click(Sender: TObject);
     procedure Cidade2Click(Sender: TObject);
+    procedure ConvenioClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,7 +39,7 @@ implementation
 
 {$R *.dfm}
 
-uses untCadCidade, untCadProduto,untCadCliente;
+uses untCadCidade, untCadProduto,untCadCliente, untCadConvenio;
 
 procedure TfrmPrincipal.TimerTimer(Sender: TObject);
 begin
@@ -55,6 +57,12 @@ procedure TfrmPrincipal.Cidade2Click(Sender: TObject);
 begin
     Application.CreateForm(TfrmCadCliente,frmCadCliente);
     frmCadCliente.Show;
+end;
+
+procedure TfrmPrincipal.ConvenioClick(Sender: TObject);
+begin
+    Application.CreateForm(TfrmCadConvenio,frmCadConvenio);
+    frmCadConvenio.Show;
 end;
 
 procedure TfrmPrincipal.Produto1Click(Sender: TObject);

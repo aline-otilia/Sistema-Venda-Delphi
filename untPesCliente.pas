@@ -16,8 +16,6 @@ type
     Label3: TLabel;
     Label1: TLabel;
     procedure btnPesquisarClick(Sender: TObject);
-    procedure pnlCamposClick(Sender: TObject);
-    
   private
     { Private declarations }
   public
@@ -52,7 +50,7 @@ begin
   end
   else if edtCod.Text <> '' then
   begin
-    vPesq := vPesq + ' AND ID CLIENTE = ' + edtCod.Text;
+    vPesq := vPesq + ' AND IDCLIENTE = ' + edtCod.Text;
   end
   else if edtNome.Text <> '' then       
   begin

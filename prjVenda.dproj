@@ -137,6 +137,14 @@
             <Form>frmPesCliente</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="untCadConvenio.pas">
+            <Form>frmCadConvenio</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untPesConvenio.pas">
+            <Form>frmPesConvenio</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

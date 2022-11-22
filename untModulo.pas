@@ -33,6 +33,12 @@ type
     qryClienteFONECLIENTE: TStringField;
     qryClienteIDCIDADE: TIntegerField;
     qryClienteNOMECIDADE: TStringField;
+    qryConvenio: TFDQuery;
+    qryConvenioIDCONVENIO: TIntegerField;
+    qryConvenioIDCLIENTE: TIntegerField;
+    qryConvenioVALORTOTAL: TLargeintField;
+    qryConvenioVALORUSADO: TLargeintField;
+    qryConvenioNOMECLIENTE: TStringField;
   private
     { Private declarations }
   public
