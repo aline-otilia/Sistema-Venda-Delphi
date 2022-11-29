@@ -36,8 +36,8 @@ type
     qryConvenio: TFDQuery;
     qryConvenioIDCONVENIO: TIntegerField;
     qryConvenioIDCLIENTE: TIntegerField;
-    qryConvenioVALORTOTAL: TLargeintField;
-    qryConvenioVALORUSADO: TLargeintField;
+    qryConvenioVALORTOTAL: TBCDField;
+    qryConvenioVALORUSADO: TBCDField;
     qryConvenioNOMECLIENTE: TStringField;
   private
     { Private declarations }

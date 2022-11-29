@@ -23,6 +23,7 @@ object modulo: Tmodulo
     Top = 16
   end
   object qryCidade: TFDQuery
+    Active = True
     Connection = conexao
     SQL.Strings = (
       'select * from cidade')
@@ -92,6 +93,7 @@ object modulo: Tmodulo
     end
   end
   object qryCliente: TFDQuery
+    Active = True
     Connection = conexao
     SQL.Strings = (
       'select * from cliente;')
@@ -154,7 +156,6 @@ object modulo: Tmodulo
     Left = 208
     Top = 72
     object qryConvenioIDCONVENIO: TIntegerField
-      DisplayLabel = 'C'#243'digo do Conv'#234'nio'
       FieldName = 'IDCONVENIO'
       Origin = 'IDCONVENIO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -162,30 +163,31 @@ object modulo: Tmodulo
     end
     object qryConvenioIDCLIENTE: TIntegerField
       AutoGenerateValue = arDefault
-      DisplayLabel = 'C'#243'digo do Cliente'
       FieldName = 'IDCLIENTE'
       Origin = 'IDCLIENTE'
     end
-    object qryConvenioVALORTOTAL: TLargeintField
+    object qryConvenioVALORTOTAL: TBCDField
       AutoGenerateValue = arDefault
-      DisplayLabel = 'Valor do Conv'#234'nio'
       FieldName = 'VALORTOTAL'
       Origin = 'VALORTOTAL'
+      Precision = 8
+      Size = 2
     end
-    object qryConvenioVALORUSADO: TLargeintField
+    object qryConvenioVALORUSADO: TBCDField
       AutoGenerateValue = arDefault
-      DisplayLabel = 'Valor Debitado'
       FieldName = 'VALORUSADO'
       Origin = 'VALORUSADO'
+      Precision = 8
+      Size = 2
     end
     object qryConvenioNOMECLIENTE: TStringField
-      DisplayLabel = 'Cliente'
       FieldKind = fkLookup
       FieldName = 'NOMECLIENTE'
       LookupDataSet = qryCliente
       LookupKeyFields = 'IDCLIENTE'
       LookupResultField = 'NOMECLIENTE'
       KeyFields = 'IDCLIENTE'
+      Size = 80
       Lookup = True
     end
   end
